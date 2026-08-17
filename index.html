@@ -1,30 +1,181 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Portfolio Miantsa</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Miantsa — Portfolio</title>
+  <meta name="description" content="Portfolio professionnel de Miantsa — Développeur Full‑stack. Projets, compétences, expérience et contact." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Miantsa — Développeur Full‑stack</h1>
-  <p>Bienvenue sur mon portfolio. Découvrez mes projets ci‑dessous.</p>
-
-  <section>
-    <h2>Mes Projets</h2>
-    <div class="projets">
-      <div class="carte">
-        <h3>Projet 1</h3>
-        <p>Application de chat en temps réel avec sockets.</p>
-        <a href="https://github.com/miantsaaaa/chat-app" target="_blank">Voir le code</a>
+  <!-- Header / Hero -->
+  <header class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1>Miantsa <span class="muted">— Développeur Full‑stack</span></h1>
+        <p class="lead">Je conçois des applications web performantes et des interfaces soignées. Spécialités : JavaScript, Node.js, React, API, déploiement.</p>
+        <div class="cta">
+          <a class="btn primary" href="#projets">Voir mes projets</a>
+          <a class="btn outline" href="#contact">Me contacter</a>
+        </div>
+        <div class="socials">
+          <a href="https://github.com/miantsaaaa" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/TON-LINKEDIN" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
       </div>
-      <div class="carte">
-        <h3>Projet 2</h3>
-        <p>Marketplace avec intégration frontend et API.</p>
-        <a href="https://github.com/miantsaaaa/MarketPlace" target="_blank">Voir le code</a>
+      <div class="hero-photo" aria-hidden="true">
+        <!-- Remplace par une vraie image si tu veux -->
+        <div class="avatar">M</div>
       </div>
     </div>
-  </section>
+  </header>
+
+  <main>
+    <!-- À propos -->
+    <section id="a-propos" class="section container">
+      <h2>À propos</h2>
+      <div class="about-grid">
+        <div>
+          <p><strong>Miantsa</strong> — développeur full‑stack basé à Fianarantsoa. J'aime transformer des idées en produits numériques robustes et accessibles. J'interviens sur la conception frontend, l'architecture backend et le déploiement cloud.</p>
+          <ul class="facts">
+            <li><strong>Expérience :</strong> 3+ ans</li>
+            <li><strong>Langages :</strong> JavaScript, HTML, CSS, Python</li>
+            <li><strong>Outils :</strong> React, Node.js, Express, PostgreSQL, Docker</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Compétences clés</h3>
+          <div class="skills">
+            <span class="skill">JavaScript</span>
+            <span class="skill">React</span>
+            <span class="skill">Node.js</span>
+            <span class="skill">REST / GraphQL</span>
+            <span class="skill">CSS / SASS</span>
+            <span class="skill">Docker</span>
+            <span class="skill">CI / CD</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projets -->
+    <section id="projets" class="section container">
+      <h2>Projets sélectionnés</h2>
+      <div class="projects-grid">
+        <!-- Projet 1 -->
+        <article class="project-card">
+          <h3>Chat en temps réel</h3>
+          <p>Application de chat en temps réel avec WebSocket, authentification et notifications.</p>
+          <p class="meta">Stack : Node.js, Socket.io, React</p>
+          <div class="project-links">
+            <a href="https://github.com/miantsaaaa/chat-app" target="_blank" rel="noopener">Code</a>
+            <a href="#" target="_blank" rel="noopener">Démo</a>
+          </div>
+        </article>
+
+        <!-- Projet 2 -->
+        <article class="project-card">
+          <h3>Marketplace</h3>
+          <p>Marketplace full‑stack avec gestion des produits, panier et API sécurisée.</p>
+          <p class="meta">Stack : React, Express, PostgreSQL</p>
+          <div class="project-links">
+            <a href="https://github.com/miantsaaaa/MarketPlace" target="_blank" rel="noopener">Code</a>
+            <a href="#" target="_blank" rel="noopener">Démo</a>
+          </div>
+        </article>
+
+        <!-- Exemple : ajouter d'autres projets -->
+        <!-- Copie-colle ce bloc pour ajouter un projet -->
+      </div>
+    </section>
+
+    <!-- Expérience -->
+    <section id="experience" class="section container">
+      <h2>Expérience</h2>
+      <div class="timeline">
+        <div class="item">
+          <div class="time">2024 — Présent</div>
+          <div class="body">
+            <h4>Développeur Full‑stack — Entreprise XYZ</h4>
+            <p>Conception et maintenance d'applications web, optimisation des performances et mise en place de pipelines CI/CD.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="time">2022 — 2024</div>
+          <div class="body">
+            <h4>Ingénieur logiciel — Projet freelance</h4>
+            <p>Développement d'API, intégration frontend et accompagnement au déploiement cloud.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Éducation -->
+    <section id="education" class="section container">
+      <h2>Formation</h2>
+      <ul class="education-list">
+        <li>
+          <strong>Licence Informatique</strong>, Université — 2020
+        </li>
+      </ul>
+    </section>
+
+    <!-- Témoignages -->
+    <section id="temoignages" class="section container">
+      <h2>Témoignages</h2>
+      <div class="testimonials">
+        <blockquote>
+          <p>« Miantsa a livré un produit de grande qualité, communication claire et respect des délais. »</p>
+          <cite>— Client, Projet Marketplace</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section container">
+      <h2>Contact</h2>
+      <div class="contact-grid">
+        <div>
+          <p>Tu veux collaborer ou en savoir plus ? Envoie‑moi un message :</p>
+          <ul class="contact-info">
+            <li><strong>Email :</strong> <a href="mailto:fitimiantsa1@gmail.com">fitimiantsa1@gmail.com</a></li>
+            <li><strong>Localisation :</strong> Fianarantsoa, Madagascar</li>
+          </ul>
+        </div>
+        <form class="contact-form" action="mailto:fitimiantsa1@gmail.com" method="post" enctype="text/plain">
+          <label>
+            <span>Nom</span>
+            <input type="text" name="Nom" required>
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="Email" required>
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="Message" rows="5" required></textarea>
+          </label>
+          <div class="form-actions">
+            <button type="submit" class="btn primary">Envoyer</button>
+            <button type="reset" class="btn outline">Effacer</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Miantsa — Développeur Full‑stack. <a href="#a-propos">À propos</a> · <a href="#projets">Projets</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // année dynamique
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-<!-- Trigger Pages rebuild 2026-08-17T18:46:46.2465862+03:00 -->
-<!-- rebuild 2026-08-17T18:59:56.6321389+03:00 -->
