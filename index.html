@@ -1,182 +1,475 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Miantsa — Portfolio</title>
-  <meta name="description" content="Portfolio professionnel de Miantsa — Développeur Full‑stack. Projets, compétences, expérience et contact." />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <title><!-- REMPLIR ICI: Ton nom — Portfolio -->Miantsa — Portfolio</title>
+
+  <!-- Google Fonts (modifiable) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Optional remote utilities (animations, icons) -->
+  <link rel="stylesheet" href="style_remote.css">
+
+  <!-- Meta for social preview (remplir) -->
+  <meta name="description" content="<!-- REMPLIR ICI: courte description professionnelle -->Développeur Full-Stack — création d'applications web robustes et scalables.">
+  <!-- Favicon: remplacer par ton favicon -->
+  <link rel="icon" href="favicon.ico" />
 </head>
 <body>
-  <!-- Header / Hero -->
-  <header class="hero">
-    <div class="container hero-inner">
-      <div class="hero-text">
-        <h1>Miantsa <span class="muted">— Développeur Full‑stack</span></h1>
-        <p class="lead">Je conçois des applications web performantes et des interfaces soignées. Spécialités : JavaScript, Node.js, React, API, déploiement.</p>
-        <div class="cta">
-          <a class="btn primary" href="#projets">Voir mes projets</a>
-          <a class="btn outline" href="#contact">Me contacter</a>
-        </div>
-        <div class="socials">
-          <a href="https://github.com/miantsaaaa" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://www.linkedin.com/in/TON-LINKEDIN" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
-      </div>
-      <div class="hero-photo" aria-hidden="true">
-        <!-- Remplace par une vraie image si tu veux -->
-        <div class="avatar">M</div>
-      </div>
-    </div>
+  <!--
+    IMPORTANT: Remplir toutes les zones marquées "REMPLIR ICI".
+    Sections incluses: Accueil, À propos, Compétences, Expérience, Formation,
+    Projets, Services, Certifications, Témoignages, GitHub/activités, CV, Contact, Footer.
+  -->
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="#home"><!-- REMPLIR ICI: Prénom Nom -->Miantsa</a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="active">Accueil</a></li>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#skills">Compétences</a></li>
+        <li><a href="#experience">Expérience</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#cv" class="btn-outline">CV</a></li>
+      </ul>
+
+      <button class="nav-toggle" aria-label="Ouvrir le menu" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
   </header>
 
   <main>
-    <!-- À propos -->
-    <section id="a-propos" class="section container">
-      <h2>À propos</h2>
+    <!-- HERO -->
+    <section id="home" class="hero container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            <!-- REMPLIR ICI: Prénom Nom -->
+            <span class="first">Miantsa</span> <span class="last">Rakoto</span>
+          </h1>
+          <p class="hero-subtitle">Full-Stack Developer</p>
+
+          <p class="hero-desc">
+            <!-- REMPLIR ICI: courte présentation professionnelle -->
+            Je conçois et développe des applications web performantes et maintenables, de l'API au front-end.
+          </p>
+
+          <p class="hero-tagline">
+            <!-- REMPLIR ICI: phrase de positionnement forte -->
+            Je transforme des idées complexes en produits digitaux fiables et élégants.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+            <a href="<!-- REMPLIR ICI: lien vers CV PDF -->#"
+               class="btn btn-ghost" id="downloadCv">Télécharger mon CV</a>
+            <a href="#contact" class="btn btn-outline">Me contacter</a>
+          </div>
+
+          <div class="socials">
+            <!-- REMPLIR ICI: remplacer # par tes URLs -->
+            <a href="https://github.com/miantsaaaa" aria-label="GitHub" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/--REMPLIR--" aria-label="LinkedIn" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="#" aria-label="Autre" target="_blank" rel="noopener">Portfolio</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <!-- REMPLIR ICI: remplacer src par ta photo professionnelle ou avatar -->
+          <div class="avatar-card">
+            <img src="avatar.jpg" alt="Photo professionnelle" class="avatar">
+            <div class="avatar-overlay">
+              <p><!-- REMPLIR ICI: courte légende ou spécialité -->Full-Stack • React • Node • Cloud</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section container">
+      <div class="section-header">
+        <h2>À propos</h2>
+        <p class="muted">Présentation détaillée</p>
+      </div>
+
       <div class="about-grid">
-        <div>
-          <p><strong>Miantsa</strong> — développeur full‑stack basé à Fianarantsoa. J'aime transformer des idées en produits numériques robustes et accessibles. J'interviens sur la conception frontend, l'architecture backend et le déploiement cloud.</p>
-          <ul class="facts">
-            <li><strong>Expérience :</strong> 3+ ans</li>
-            <li><strong>Langages :</strong> JavaScript, HTML, CSS, Python</li>
-            <li><strong>Outils :</strong> React, Node.js, Express, PostgreSQL, Docker</li>
+        <div class="about-text">
+          <h3><!-- REMPLIR ICI: titre court -->Développeur Full-Stack orienté produit</h3>
+          <p>
+            <!-- REMPLIR ICI: bio complète -->
+            Passionné par la création d'expériences utilisateurs robustes, j'interviens sur l'architecture, le développement et le déploiement.
+          </p>
+
+          <ul class="about-list">
+            <li><strong>Localisation:</strong> Fianarantsoa, Madagascar <!-- REMPLIR ICI si différent --></li>
+            <li><strong>Disponibilité:</strong> Freelance / CDI <!-- REMPLIR ICI --></li>
+            <li><strong>Langues:</strong> Français; Anglais <!-- REMPLIR ICI --></li>
           </ul>
         </div>
-        <div>
-          <h3>Compétences clés</h3>
-          <div class="skills">
-            <span class="skill">JavaScript</span>
-            <span class="skill">React</span>
-            <span class="skill">Node.js</span>
-            <span class="skill">REST / GraphQL</span>
-            <span class="skill">CSS / SASS</span>
-            <span class="skill">Docker</span>
-            <span class="skill">CI / CD</span>
+
+        <div class="about-stats">
+          <div class="card stat">
+            <div class="stat-value">+5</div>
+            <div class="stat-label">Années d'expérience</div>
+          </div>
+          <div class="card stat">
+            <div class="stat-value">20+</div>
+            <div class="stat-label">Projets livrés</div>
+          </div>
+          <div class="card stat">
+            <div class="stat-value">100%</div>
+            <div class="stat-label">Satisfaction client</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Projets -->
-    <section id="projets" class="section container">
-      <h2>Projets sélectionnés</h2>
-      <div class="projects-grid">
-        <!-- Projet 1 -->
-        <article class="project-card">
-          <h3>Chat en temps réel</h3>
-          <p>Application de chat en temps réel avec WebSocket, authentification et notifications.</p>
-          <p class="meta">Stack : Node.js, Socket.io, React</p>
-          <div class="project-links">
-            <a href="https://github.com/miantsaaaa/chat-app" target="_blank" rel="noopener">Code</a>
-            <a href="#" target="_blank" rel="noopener">Démo</a>
-          </div>
-        </article>
+    <!-- SKILLS -->
+    <section id="skills" class="section container">
+      <div class="section-header">
+        <h2>Compétences</h2>
+        <p class="muted">Technologies & savoir-faire</p>
+      </div>
 
-        <!-- Projet 2 -->
-        <article class="project-card">
-          <h3>Marketplace</h3>
-          <p>Marketplace full‑stack avec gestion des produits, panier et API sécurisée.</p>
-          <p class="meta">Stack : React, Express, PostgreSQL</p>
-          <div class="project-links">
-            <a href="https://github.com/miantsaaaa/MarketPlace" target="_blank" rel="noopener">Code</a>
-            <a href="#" target="_blank" rel="noopener">Démo</a>
-          </div>
-        </article>
+      <div class="skills-grid">
+        <!-- Chaque carte: remplacer les compétences et niveaux -->
+        <div class="skill-card card">
+          <h4>Front-end</h4>
+          <p class="muted">React, Vue, TypeScript, HTML, CSS</p>
+          <div class="skill-bar"><span style="width:90%"></span></div>
+        </div>
 
-        <!-- Exemple : ajouter d'autres projets -->
-        <!-- Copie-colle ce bloc pour ajouter un projet -->
+        <div class="skill-card card">
+          <h4>Back-end</h4>
+          <p class="muted">Node.js, Express, Python, REST, GraphQL</p>
+          <div class="skill-bar"><span style="width:85%"></span></div>
+        </div>
+
+        <div class="skill-card card">
+          <h4>Cloud & DevOps</h4>
+          <p class="muted">AWS, Docker, CI/CD, Terraform</p>
+          <div class="skill-bar"><span style="width:75%"></span></div>
+        </div>
+
+        <div class="skill-card card">
+          <h4>Bases de données</h4>
+          <p class="muted">Postgres, MongoDB, Redis</p>
+          <div class="skill-bar"><span style="width:80%"></span></div>
+        </div>
       </div>
     </section>
 
-    <!-- Expérience -->
+    <!-- EXPERIENCE -->
     <section id="experience" class="section container">
-      <h2>Expérience</h2>
+      <div class="section-header">
+        <h2>Expérience</h2>
+        <p class="muted">Rôles récents</p>
+      </div>
+
       <div class="timeline">
-        <div class="item">
-          <div class="time">2024 — Présent</div>
-          <div class="body">
-            <h4>Développeur Full‑stack — Entreprise XYZ</h4>
-            <p>Conception et maintenance d'applications web, optimisation des performances et mise en place de pipelines CI/CD.</p>
+        <!-- REMPLIR ICI: dupliquer les blocs pour chaque expérience -->
+        <article class="timeline-item card">
+          <div class="timeline-meta">
+            <h3>Lead Developer</h3>
+            <span class="muted">Entreprise X — 2022 — Présent</span>
           </div>
+          <div class="timeline-body">
+            <p><!-- REMPLIR ICI: description des responsabilités et réalisations -->
+              Conception d'une architecture microservices, amélioration des performances de 40%.
+            </p>
+          </div>
+        </article>
+
+        <article class="timeline-item card">
+          <div class="timeline-meta">
+            <h3>Full-Stack Developer</h3>
+            <span class="muted">Startup Y — 2019 — 2022</span>
+          </div>
+          <div class="timeline-body">
+            <p><!-- REMPLIR ICI -->
+              Développement d'une plateforme SaaS, intégration paiement et analytics.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section container">
+      <div class="section-header">
+        <h2>Formation</h2>
+        <p class="muted">Diplômes & certifications</p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card">
+          <h4><!-- REMPLIR ICI: diplôme -->Master Informatique</h4>
+          <p class="muted">Université Z — 2018</p>
         </div>
-        <div class="item">
-          <div class="time">2022 — 2024</div>
-          <div class="body">
-            <h4>Ingénieur logiciel — Projet freelance</h4>
-            <p>Développement d'API, intégration frontend et accompagnement au déploiement cloud.</p>
-          </div>
+
+        <div class="card">
+          <h4><!-- REMPLIR ICI: certification -->Certification Cloud</h4>
+          <p class="muted">Fournisseur — 2021</p>
         </div>
       </div>
     </section>
 
-    <!-- Éducation -->
-    <section id="education" class="section container">
-      <h2>Formation</h2>
-      <ul class="education-list">
-        <li>
-          <strong>Licence Informatique</strong>, Université — 2020
-        </li>
-      </ul>
+    <!-- PROJECTS -->
+    <section id="projects" class="section container">
+      <div class="section-header">
+        <h2>Projets</h2>
+        <p class="muted">Sélection de projets récents</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- REMPLIR ICI: dupliquer pour chaque projet -->
+        <article class="project-card card">
+          <img src="project-1.jpg" alt="Project 1 screenshot" class="project-thumb">
+          <div class="project-body">
+            <h3><!-- REMPLIR ICI: titre projet -->App SaaS</h3>
+            <p class="muted">Stack: React, Node, Postgres</p>
+            <p><!-- REMPLIR ICI: courte description -->
+              Plateforme de gestion client avec authentification et tableau de bord.
+            </p>
+            <div class="project-actions">
+              <a href="#" class="btn-sm">Voir le projet</a>
+              <a href="#" class="btn-sm btn-outline">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card card">
+          <img src="project-2.jpg" alt="Project 2 screenshot" class="project-thumb">
+          <div class="project-body">
+            <h3>API temps réel</h3>
+            <p class="muted">Stack: Node, WebSocket, Redis</p>
+            <p>API temps réel pour synchronisation multi-utilisateurs.</p>
+            <div class="project-actions">
+              <a href="#" class="btn-sm">Voir le projet</a>
+              <a href="#" class="btn-sm btn-outline">Code</a>
+            </div>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <!-- Témoignages -->
-    <section id="temoignages" class="section container">
-      <h2>Témoignages</h2>
-      <div class="testimonials">
-        <blockquote>
-          <p>« Miantsa a livré un produit de grande qualité, communication claire et respect des délais. »</p>
-          <cite>— Client, Projet Marketplace</cite>
+    <!-- SERVICES -->
+    <section id="services" class="section container">
+      <div class="section-header">
+        <h2>Services</h2>
+        <p class="muted">Ce que je propose</p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card service">
+          <h4>Développement Full-Stack</h4>
+          <p>Conception, développement et déploiement d'applications web complètes.</p>
+        </div>
+        <div class="card service">
+          <h4>Architecture & Conseil</h4>
+          <p>Audit technique, choix d'architecture, optimisation des coûts cloud.</p>
+        </div>
+        <div class="card service">
+          <h4>Maintenance & Support</h4>
+          <p>Contrats de maintenance, monitoring et amélioration continue.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="section container">
+      <div class="section-header">
+        <h2>Certifications</h2>
+        <p class="muted">Formations et attestations</p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card">
+          <h4>Certification Exemple</h4>
+          <p class="muted">Fournisseur — Année</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="section container">
+      <div class="section-header">
+        <h2>Témoignages</h2>
+        <p class="muted">Ce que disent mes clients</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <!-- REMPLIR ICI: ajouter témoignages réels -->
+        <blockquote class="testimonial card">
+          <p>"Excellente collaboration, livraison dans les délais et code propre."</p>
+          <footer>— Client A, CEO</footer>
+        </blockquote>
+
+        <blockquote class="testimonial card">
+          <p>"Très réactif et force de proposition sur l'UX."</p>
+          <footer>— Client B, Product Manager</footer>
         </blockquote>
       </div>
     </section>
 
-    <!-- Contact -->
+    <!-- GITHUB / ACTIVITÉS -->
+    <section id="github" class="section container">
+      <div class="section-header">
+        <h2>GitHub & Activités</h2>
+        <p class="muted">Contributions récentes</p>
+      </div>
+
+      <div class="card">
+        <p class="muted">Intégration possible: widget GitHub, commits récents, stats. <!-- REMPLIR ICI: lien GitHub --> </p>
+        <!-- REMPLIR ICI: si tu veux, intégrer GitHub activity via API ou badges -->
+      </div>
+    </section>
+
+    <!-- CV -->
+    <section id="cv" class="section container">
+      <div class="section-header">
+        <h2>CV</h2>
+        <p class="muted">Télécharger mon CV complet</p>
+      </div>
+
+      <div class="card">
+        <p><!-- REMPLIR ICI: résumé ou lien vers CV PDF -->Téléchargez mon CV pour le détail complet des expériences et compétences.</p>
+        <a href="<!-- REMPLIR ICI: lien CV PDF -->#" class="btn btn-primary">Télécharger le CV (PDF)</a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
     <section id="contact" class="section container">
-      <h2>Contact</h2>
+      <div class="section-header">
+        <h2>Contact</h2>
+        <p class="muted">Discutons de votre projet</p>
+      </div>
+
       <div class="contact-grid">
-        <div>
-          <p>Tu veux collaborer ou en savoir plus ? Envoie‑moi un message :</p>
-          <ul class="contact-info">
-            <li><strong>Email :</strong> <a href="mailto:fitimiantsa1@gmail.com">fitimiantsa1@gmail.com</a></li>
-            <li><strong>Localisation :</strong> Fianarantsoa, Madagascar</li>
-          </ul>
-        </div>
-        <form class="contact-form" action="mailto:fitimiantsa1@gmail.com" method="post" enctype="text/plain">
+        <form id="contactForm" class="card contact-form" action="#" method="post" onsubmit="handleContact(event)">
+          <!-- REMPLIR ICI: si tu veux un backend, remplacer action par ton endpoint -->
           <label>
             <span>Nom</span>
-            <input type="text" name="Nom" required>
+            <input type="text" name="name" required placeholder="Votre nom">
           </label>
+
           <label>
             <span>Email</span>
-            <input type="email" name="Email" required>
+            <input type="email" name="email" required placeholder="votre@exemple.com">
           </label>
+
+          <label>
+            <span>Sujet</span>
+            <input type="text" name="subject" placeholder="Sujet">
+          </label>
+
           <label>
             <span>Message</span>
-            <textarea name="Message" rows="5" required></textarea>
+            <textarea name="message" rows="6" required placeholder="Décrivez votre projet..."></textarea>
           </label>
+
           <div class="form-actions">
-            <button type="submit" class="btn primary">Envoyer</button>
-            <button type="reset" class="btn outline">Effacer</button>
+            <button type="submit" class="btn btn-primary">Envoyer</button>
+            <button type="reset" class="btn btn-ghost">Effacer</button>
           </div>
+
+          <!-- REMPLIR ICI: ajouter honeypot ou token anti-spam si nécessaire -->
         </form>
+
+        <aside class="card contact-info">
+          <h4>Coordonnées</h4>
+          <p><!-- REMPLIR ICI: adresse, téléphone, email -->Email: <a href="mailto:you@example.com">you@example.com</a></p>
+          <p>Téléphone: <!-- REMPLIR ICI -->+261 34 12 345 67</p>
+          <p>Localisation: Fianarantsoa, Madagascar</p>
+
+          <div class="contact-cta">
+            <a href="mailto:you@example.com" class="btn btn-outline">Envoyer un email</a>
+            <a href="<!-- REMPLIR ICI: lien Calendly ou RDV -->#" class="btn btn-sm">Planifier un RDV</a>
+          </div>
+        </aside>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Miantsa — Développeur Full‑stack. <a href="#a-propos">À propos</a> · <a href="#projets">Projets</a></p>
+    <div class="container footer-grid">
+      <div>
+        <strong><!-- REMPLIR ICI: Prénom Nom -->Miantsa Rakoto</strong>
+        <p class="muted">Full-Stack Developer</p>
+      </div>
+
+      <nav class="footer-nav">
+        <a href="#projects">Projets</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="footer-legal muted">
+        <p>© <!-- REMPLIR ICI: année -->2026 • Tous droits réservés</p>
+      </div>
     </div>
   </footer>
 
+  <!-- Minimal JS for interactions and animations -->
   <script>
-    // année dynamique
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // NAV TOGGLE
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      navToggle.classList.toggle('open');
+    });
+
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', function (e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Simple contact handler (client-side only)
+    function handleContact(e) {
+      e.preventDefault();
+      // REMPLIR ICI: remplacer par envoi réel (fetch vers ton backend / service)
+      alert('Merci — message prêt à être envoyé. Remplacez ce handler par votre backend.');
+      e.target.reset();
+    }
+
+    // Micro-interaction: button hover ripple (progressive enhancement)
+    document.querySelectorAll('.btn').forEach(btn => {
+      btn.addEventListener('pointerdown', (ev) => {
+        const circle = document.createElement('span');
+        circle.className = 'ripple';
+        circle.style.left = (ev.offsetX) + 'px';
+        circle.style.top = (ev.offsetY) + 'px';
+        btn.appendChild(circle);
+        setTimeout(() => circle.remove(), 600);
+      });
+    });
+
+    // Reveal on scroll (simple)
+    const reveals = document.querySelectorAll('.section, .card, .project-card, .timeline-item');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal');
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(r => observer.observe(r));
   </script>
 </body>
 </html>
-<!-- rebuild 2026-08-17T19:19:54.4434933+03:00 -->
