@@ -17,3 +17,41 @@ p {
   text-align: center;
   font-size: 1.2em;
 }
+
+section {
+  margin: 50px auto;
+  width: 80%;
+}
+
+h2 {
+  text-align: center;
+  color: #00d4ff;
+  margin-bottom: 20px;
+}
+
+.projets {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.carte {
+  background: #2a2a40;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.carte h3 {
+  color: #ffcc00;
+}
+
+.carte a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #00d4ff;
+  text-decoration: none;
+  font-weight: bold;
+}
