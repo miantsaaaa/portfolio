@@ -1,36 +1,41 @@
 /* ============================================================
    STYLE REMOTE
-   Utilitaires complémentaires du portfolio.
-   Chargé après style.css.
+   Utilitaires complémentaires.
    ============================================================ */
 
 
 /* ============================================================
-   BADGES
+   BADGE
    ============================================================ */
 
 .badge {
 
-  display: inline-flex;
+  display:
+    inline-flex;
 
-  align-items: center;
+  align-items:
+    center;
 
   padding:
     6px 10px;
 
   border:
-    1px solid rgba(255,255,255,.10);
+    1px solid var(--line);
 
-  border-radius: 999px;
+  border-radius:
+    999px;
+
+  color:
+    var(--text-soft);
 
   background:
-    rgba(255,255,255,.035);
+    rgba(255,255,255,.55);
 
-  color: var(--muted);
+  font-size:
+    .68rem;
 
-  font-size: .7rem;
-
-  font-weight: 600;
+  font-weight:
+    700;
 
 }
 
@@ -41,11 +46,14 @@
 
 .kv {
 
-  display: flex;
+  display:
+    flex;
 
-  align-items: center;
+  align-items:
+    center;
 
-  gap: 10px;
+  gap:
+    8px;
 
 }
 
@@ -57,7 +65,7 @@
 .fade-in {
 
   animation:
-    remoteFadeIn
+    fadeIn
     700ms
     cubic-bezier(.16,1,.3,1)
     both;
@@ -65,21 +73,23 @@
 }
 
 
-@keyframes remoteFadeIn {
+@keyframes fadeIn {
 
   from {
 
-    opacity: 0;
+    opacity:
+      0;
 
     transform:
-      translateY(18px)
-      scale(.98);
+      translateY(15px)
+      scale(.985);
 
   }
 
   to {
 
-    opacity: 1;
+    opacity:
+      1;
 
     transform:
       translateY(0)
@@ -91,14 +101,15 @@
 
 
 /* ============================================================
-   MENU ANIMATION
+   MOBILE MENU
    ============================================================ */
 
 @keyframes menuOpen {
 
   from {
 
-    opacity: 0;
+    opacity:
+      0;
 
     transform:
       translateY(-8px)
@@ -108,7 +119,8 @@
 
   to {
 
-    opacity: 1;
+    opacity:
+      1;
 
     transform:
       translateY(0)
@@ -120,36 +132,16 @@
 
 
 /* ============================================================
-   SOFT GLOW
+   CUSTOM FOCUS
    ============================================================ */
 
-.soft-glow {
+:focus-visible {
 
-  box-shadow:
-    0 0 0 1px rgba(110,231,183,.04),
-    0 20px 70px rgba(110,231,183,.06);
+  outline:
+    2px solid var(--blue);
 
-}
-
-
-/* ============================================================
-   TEXT GRADIENT
-   ============================================================ */
-
-.text-gradient {
-
-  color: transparent;
-
-  background:
-    linear-gradient(
-      100deg,
-      var(--accent),
-      var(--accent-secondary)
-    );
-
-  background-clip: text;
-
-  -webkit-background-clip: text;
+  outline-offset:
+    3px;
 
 }
 
@@ -160,7 +152,8 @@
 
 ::-webkit-scrollbar {
 
-  width: 8px;
+  width:
+    8px;
 
 }
 
@@ -168,17 +161,18 @@
 ::-webkit-scrollbar-track {
 
   background:
-    var(--bg);
+    #edf3f8;
 
 }
 
 
 ::-webkit-scrollbar-thumb {
 
-  border-radius: 999px;
+  border-radius:
+    999px;
 
   background:
-    rgba(255,255,255,.12);
+    rgba(37,99,235,.20);
 
 }
 
@@ -186,36 +180,6 @@
 ::-webkit-scrollbar-thumb:hover {
 
   background:
-    rgba(110,231,183,.30);
-
-}
-
-
-/* ============================================================
-   FOCUS ACCESSIBILITY
-   ============================================================ */
-
-:focus-visible {
-
-  outline:
-    2px solid var(--accent);
-
-  outline-offset:
-    3px;
-
-}
-
-
-/* ============================================================
-   MOBILE UTILITIES
-   ============================================================ */
-
-@media (max-width: 560px) {
-
-  .hide-mobile {
-
-    display: none !important;
-
-  }
+    rgba(37,99,235,.38);
 
 }
