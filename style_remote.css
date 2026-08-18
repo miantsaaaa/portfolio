@@ -1,9 +1,221 @@
-/* style_remote.css
-   Utilitaires légers: ombres, badges, animations supplémentaires.
-   Charger après style.css pour overrides.
-*/
+/* ============================================================
+   STYLE REMOTE
+   Utilitaires complémentaires du portfolio.
+   Chargé après style.css.
+   ============================================================ */
 
-.badge{display:inline-block; padding:.25rem .5rem; border-radius:999px; background:rgba(255,255,255,0.03); color:var(--muted); font-weight:600; font-size:.85rem}
-.kv{display:flex; gap:.6rem; align-items:center}
-.fade-in{animation:fadeIn .6s ease both}
-@keyframes fadeIn{from{opacity:0; transform:translateY(6px)} to{opacity:1; transform:none}}
+
+/* ============================================================
+   BADGES
+   ============================================================ */
+
+.badge {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  padding:
+    6px 10px;
+
+  border:
+    1px solid rgba(255,255,255,.10);
+
+  border-radius: 999px;
+
+  background:
+    rgba(255,255,255,.035);
+
+  color: var(--muted);
+
+  font-size: .7rem;
+
+  font-weight: 600;
+
+}
+
+
+/* ============================================================
+   KEY / VALUE
+   ============================================================ */
+
+.kv {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+}
+
+
+/* ============================================================
+   FADE IN
+   ============================================================ */
+
+.fade-in {
+
+  animation:
+    remoteFadeIn
+    700ms
+    cubic-bezier(.16,1,.3,1)
+    both;
+
+}
+
+
+@keyframes remoteFadeIn {
+
+  from {
+
+    opacity: 0;
+
+    transform:
+      translateY(18px)
+      scale(.98);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+
+  }
+
+}
+
+
+/* ============================================================
+   MENU ANIMATION
+   ============================================================ */
+
+@keyframes menuOpen {
+
+  from {
+
+    opacity: 0;
+
+    transform:
+      translateY(-8px)
+      scale(.98);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+
+  }
+
+}
+
+
+/* ============================================================
+   SOFT GLOW
+   ============================================================ */
+
+.soft-glow {
+
+  box-shadow:
+    0 0 0 1px rgba(110,231,183,.04),
+    0 20px 70px rgba(110,231,183,.06);
+
+}
+
+
+/* ============================================================
+   TEXT GRADIENT
+   ============================================================ */
+
+.text-gradient {
+
+  color: transparent;
+
+  background:
+    linear-gradient(
+      100deg,
+      var(--accent),
+      var(--accent-secondary)
+    );
+
+  background-clip: text;
+
+  -webkit-background-clip: text;
+
+}
+
+
+/* ============================================================
+   SCROLLBAR
+   ============================================================ */
+
+::-webkit-scrollbar {
+
+  width: 8px;
+
+}
+
+
+::-webkit-scrollbar-track {
+
+  background:
+    var(--bg);
+
+}
+
+
+::-webkit-scrollbar-thumb {
+
+  border-radius: 999px;
+
+  background:
+    rgba(255,255,255,.12);
+
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+
+  background:
+    rgba(110,231,183,.30);
+
+}
+
+
+/* ============================================================
+   FOCUS ACCESSIBILITY
+   ============================================================ */
+
+:focus-visible {
+
+  outline:
+    2px solid var(--accent);
+
+  outline-offset:
+    3px;
+
+}
+
+
+/* ============================================================
+   MOBILE UTILITIES
+   ============================================================ */
+
+@media (max-width: 560px) {
+
+  .hide-mobile {
+
+    display: none !important;
+
+  }
+
+}

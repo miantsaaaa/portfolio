@@ -1,475 +1,1901 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title><!-- REMPLIR ICI: Ton nom — Portfolio -->Miantsa — Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Google Fonts (modifiable) -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <!--
+    ============================================================
+    PERSONNEL — À PERSONNALISER
+    Exemple :
+    "Miantsa — Développeur Full-Stack | Portfolio"
+    ============================================================
+  -->
+  <title>Nom Prénom — Portfolio Full-Stack</title>
 
-  <!-- Main stylesheet -->
+  <meta
+    name="description"
+    content="Portfolio professionnel d'un développeur Full-Stack spécialisé dans la conception et le développement d'applications web."
+  >
+
+  <meta name="theme-color" content="#070b12">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css">
-
-  <!-- Optional remote utilities (animations, icons) -->
   <link rel="stylesheet" href="style_remote.css">
 
-  <!-- Meta for social preview (remplir) -->
-  <meta name="description" content="<!-- REMPLIR ICI: courte description professionnelle -->Développeur Full-Stack — création d'applications web robustes et scalables.">
-  <!-- Favicon: remplacer par ton favicon -->
-  <link rel="icon" href="favicon.ico" />
-</head>
-<body>
   <!--
-    IMPORTANT: Remplir toutes les zones marquées "REMPLIR ICI".
-    Sections incluses: Accueil, À propos, Compétences, Expérience, Formation,
-    Projets, Services, Certifications, Témoignages, GitHub/activités, CV, Contact, Footer.
+    ============================================================
+    PERSONNEL — Favicon
+    Exemple :
+    favicon.ico
+    ============================================================
   -->
+  <link rel="icon" href="favicon.ico">
+</head>
 
-  <header class="site-header">
-    <nav class="nav container">
-      <a class="brand" href="#home"><!-- REMPLIR ICI: Prénom Nom -->Miantsa Fitia ANDRINIAINA</a>
+<body>
+
+  <!-- Background decoration -->
+  <div class="background-effects" aria-hidden="true">
+    <div class="orb orb-one"></div>
+    <div class="orb orb-two"></div>
+    <div class="orb orb-three"></div>
+    <div class="grid-background"></div>
+  </div>
+
+  <!-- ========================================================
+       HEADER
+       ======================================================== -->
+
+  <header class="site-header" id="siteHeader">
+    <nav class="nav container" aria-label="Navigation principale">
+
+      <!--
+        PERSONNEL
+        Exemple : Miantsa
+      -->
+      <a href="#home" class="brand">
+        <span class="brand-mark">&lt;/&gt;</span>
+        <span>Nom<span class="brand-accent">.</span></span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        id="navToggle"
+        type="button"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+        aria-controls="navLinks"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
       <ul class="nav-links" id="navLinks">
-        <li><a href="#home" class="active">Accueil</a></li>
-        <li><a href="#about">À propos</a></li>
-        <li><a href="#skills">Compétences</a></li>
-        <li><a href="#experience">Expérience</a></li>
-        <li><a href="#projects">Projets</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#cv" class="btn-outline">CV</a></li>
-      </ul>
 
-      <button class="nav-toggle" aria-label="Ouvrir le menu" id="navToggle">
-        <span></span><span></span><span></span>
-      </button>
+        <li>
+          <a href="#home" class="nav-link active">Accueil</a>
+        </li>
+
+        <li>
+          <a href="#about" class="nav-link">À propos</a>
+        </li>
+
+        <li>
+          <a href="#skills" class="nav-link">Compétences</a>
+        </li>
+
+        <li>
+          <a href="#experience" class="nav-link">Expérience</a>
+        </li>
+
+        <li>
+          <a href="#projects" class="nav-link">Projets</a>
+        </li>
+
+        <li>
+          <a href="#education" class="nav-link">Formation</a>
+        </li>
+
+        <li>
+          <a href="#contact" class="nav-link">Contact</a>
+        </li>
+
+        <li>
+          <!--
+            PERSONNEL
+            Exemple : href="cv.pdf"
+          -->
+          <a href="#" class="nav-cv">
+            CV
+          </a>
+        </li>
+
+      </ul>
     </nav>
   </header>
 
+
   <main>
-    <!-- HERO -->
-    <section id="home" class="hero container">
-      <div class="hero-grid">
-        <div class="hero-content">
-          <h1 class="hero-title">
-            <!-- REMPLIR ICI: Prénom Nom -->
-            <span class="first">Miantsa Fitia </span> <span class="last">ANDRINIAINA</span>
-          </h1>
-          <p class="hero-subtitle">Full-Stack Developer</p>
 
-          <p class="hero-desc">
-            <!-- REMPLIR ICI: courte présentation professionnelle -->
-            Je conçois et développe des applications web performantes et maintenables, de l'API au front-end.
-          </p>
+    <!-- ======================================================
+         HERO
+         ====================================================== -->
 
-          <p class="hero-tagline">
-            <!-- REMPLIR ICI: phrase de positionnement forte -->
-            Je transforme des idées complexes en produits digitaux fiables et élégants.
-          </p>
+    <section id="home" class="hero section-shell">
 
-          <div class="hero-ctas">
-            <a href="#projects" class="btn btn-primary">Voir mes projets</a>
-            <a href="<!-- REMPLIR ICI: lien vers CV PDF -->#"
-               class="btn btn-ghost" id="downloadCv">Télécharger mon CV</a>
-            <a href="#contact" class="btn btn-outline">Me contacter</a>
-          </div>
+      <div class="container hero-container">
 
-          <div class="socials">
-            <!-- REMPLIR ICI: remplacer # par tes URLs -->
-            <a href="https://github.com/miantsaaaa" aria-label="GitHub" target="_blank" rel="noopener">GitHub</a>
-            <a href="https://www.linkedin.com/in/--REMPLIR--" aria-label="LinkedIn" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="#" aria-label="Autre" target="_blank" rel="noopener">Portfolio</a>
-          </div>
-        </div>
+        <div class="hero-grid">
 
-        <div class="hero-visual">
-          <!-- REMPLIR ICI: remplacer src par ta photo professionnelle ou avatar -->
-          <div class="avatar-card">
-            <img src="avatar.jpg" alt="Photo professionnelle" class="avatar">
-            <div class="avatar-overlay">
-              <p><!-- REMPLIR ICI: courte légende ou spécialité -->Full-Stack • React • Node • Cloud • Python</p>
+          <div class="hero-content reveal">
+
+            <div class="eyebrow">
+              <span class="status-dot"></span>
+              Disponible pour de nouvelles opportunités
             </div>
+
+            <h1 class="hero-title">
+
+              <!--
+                PERSONNEL
+                Exemple :
+                Miantsa Fitia
+              -->
+              <span class="hero-name">Nom Prénom</span>
+
+              <span class="hero-role">
+                Full-Stack
+                <span class="gradient-text">Developer</span>
+              </span>
+
+            </h1>
+
+            <p class="hero-description">
+              Je conçois et développe des applications web modernes,
+              performantes et maintenables, en intervenant aussi bien
+              sur le frontend que sur le backend.
+            </p>
+
+            <p class="hero-tagline">
+              Transformer des problèmes complexes en solutions
+              digitales simples, fiables et évolutives.
+            </p>
+
+            <div class="hero-actions">
+
+              <a href="#projects" class="btn btn-primary">
+                Voir mes projets
+                <span>↗</span>
+              </a>
+
+              <a href="#contact" class="btn btn-secondary">
+                Me contacter
+              </a>
+
+              <!--
+                PERSONNEL
+                Exemple :
+                href="cv.pdf"
+              -->
+              <a href="#" class="btn btn-ghost">
+                Télécharger le CV
+              </a>
+
+            </div>
+
+            <div class="social-links">
+
+              <!--
+                PERSONNEL
+                Remplacer les "#" par les véritables URLs.
+              -->
+
+              <a href="#" target="_blank" rel="noopener">
+                GitHub
+              </a>
+
+              <a href="#" target="_blank" rel="noopener">
+                LinkedIn
+              </a>
+
+              <a href="#" target="_blank" rel="noopener">
+                Email
+              </a>
+
+            </div>
+
           </div>
+
+
+          <div class="hero-visual reveal reveal-delay-2">
+
+            <!--
+              PERSONNEL
+              Remplacer "avatar.jpg" par une photo professionnelle.
+              Exemple :
+              images/profile.jpg
+            -->
+
+            <div class="profile-card glass-card">
+
+              <div class="profile-card-glow"></div>
+
+              <div class="profile-image-wrapper">
+
+                <img
+                  src="avatar.jpg"
+                  alt="Photo professionnelle"
+                  class="profile-image"
+                >
+
+              </div>
+
+              <div class="profile-card-content">
+
+                <!-- PERSONNEL -->
+                <span class="profile-label">
+                  Full-Stack Developer
+                </span>
+
+                <!-- PERSONNEL -->
+                <h2>
+                  Construire.
+                  <br>
+                  Améliorer.
+                  <br>
+                  <span class="gradient-text">Innover.</span>
+                </h2>
+
+                <div class="profile-tech">
+
+                  <span>Frontend</span>
+                  <span>Backend</span>
+                  <span>Database</span>
+                  <span>Cloud</span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
         </div>
+
       </div>
+
     </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="section container">
-      <div class="section-header">
-        <h2>À propos</h2>
-        <p>Présentation détaillée</p>
-      </div>
 
-      <div class="about-grid">
-        <div class="about-text">
-          <h3><!-- REMPLIR ICI: titre court -->Développeur Full-Stack orienté produit</h3>
+    <!-- ======================================================
+         ABOUT
+         ====================================================== -->
+
+    <section id="about" class="section-shell">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <span class="section-number">01</span>
+
+          <div>
+            <span class="section-kicker">Présentation</span>
+            <h2>À propos de moi</h2>
+          </div>
+
           <p>
-            <!-- REMPLIR ICI: bio complète -->
-            Passionné par la création d'expériences utilisateurs robustes, j'interviens sur l'architecture, le développement et le déploiement.
+            Une vision complète du développement logiciel,
+            de l'idée jusqu'à la mise en production.
           </p>
 
-          <ul class="about-list">
-            <li><strong>Localisation:</strong> Fianarantsoa, Madagascar <!-- REMPLIR ICI si différent --></li>
-            <li><strong>Disponibilité:</strong> Freelance / CDI <!-- REMPLIR ICI --></li>
-            <li><strong>Langues:</strong> Français; Anglais <!-- REMPLIR ICI --></li>
-          </ul>
         </div>
 
-        <div class="about-stats">
-          <div class="card stat">
-            <div class="stat-value">+5</div>
-            <div class="stat-label">Années d'expérience</div>
-          </div>
-          <div class="card stat">
-            <div class="stat-value">20+</div>
-            <div class="stat-label">Projets livrés</div>
-          </div>
-          <div class="card stat">
-            <div class="stat-value">100%</div>
-            <div class="stat-label">Satisfaction client</div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- SKILLS -->
-    <section id="skills" class="section container">
-      <div class="section-header">
-        <h2>Compétences</h2>
-        <p class="muted">Technologies & savoir-faire</p>
-      </div>
+        <div class="about-layout">
 
-      <div class="skills-grid">
-        <!-- Chaque carte: remplacer les compétences et niveaux -->
-        <div class="skill-card card">
-          <h4>Front-end</h4>
-          <p class="muted">React, Vue, TypeScript, HTML, CSS</p>
-          <div class="skill-bar"><span style="width:90%"></span></div>
-        </div>
+          <article class="glass-card about-main reveal">
 
-        <div class="skill-card card">
-          <h4>Back-end</h4>
-          <p class="muted">Node.js, Express, Python, REST, GraphQL</p>
-          <div class="skill-bar"><span style="width:85%"></span></div>
-        </div>
+            <!--
+              ==================================================
+              PERSONNEL — BIOGRAPHIE
+              
+              Exemple :
+              "Je suis un développeur Full-Stack basé à Madagascar,
+              passionné par la conception d'applications web..."
+              ==================================================
+            -->
 
-        <div class="skill-card card">
-          <h4>Cloud & DevOps</h4>
-          <p class="muted">AWS, Docker, CI/CD, Terraform</p>
-          <div class="skill-bar"><span style="width:75%"></span></div>
-        </div>
+            <span class="card-label">01 / Profil</span>
 
-        <div class="skill-card card">
-          <h4>Bases de données</h4>
-          <p class="muted">Postgres, MongoDB, Redis</p>
-          <div class="skill-bar"><span style="width:80%"></span></div>
-        </div>
-      </div>
-    </section>
+            <h3>
+              Développeur Full-Stack
+              <span class="gradient-text">orienté produit</span>
+            </h3>
 
-    <!-- EXPERIENCE -->
-    <section id="experience" class="section container">
-      <div class="section-header">
-        <h2>Expérience</h2>
-        <p class="muted">Rôles récents</p>
-      </div>
-
-      <div class="timeline">
-        <!-- REMPLIR ICI: dupliquer les blocs pour chaque expérience -->
-        <article class="timeline-item card">
-          <div class="timeline-meta">
-            <h3>Lead Developer</h3>
-            <span class="muted">Entreprise X — 2022 — Présent</span>
-          </div>
-          <div class="timeline-body">
-            <p><!-- REMPLIR ICI: description des responsabilités et réalisations -->
-              Conception d'une architecture microservices, amélioration des performances de 40%.
+            <p>
+              Je développe des applications web en prenant en compte
+              l'ensemble du cycle de vie d'un produit : compréhension
+              du besoin, conception, architecture, développement,
+              tests, déploiement et maintenance.
             </p>
-          </div>
-        </article>
 
-        <article class="timeline-item card">
-          <div class="timeline-meta">
-            <h3>Full-Stack Developer</h3>
-            <span class="muted">Startup Y — 2019 — 2022</span>
-          </div>
-          <div class="timeline-body">
-            <p><!-- REMPLIR ICI -->
-              Développement d'une plateforme SaaS, intégration paiement et analytics.
+            <p>
+              Mon approche consiste à rechercher un équilibre entre
+              qualité technique, expérience utilisateur, performance,
+              sécurité et maintenabilité.
             </p>
-          </div>
-        </article>
-      </div>
-    </section>
 
-    <!-- EDUCATION -->
-    <section id="education" class="section container">
-      <div class="section-header">
-        <h2>Formation</h2>
-        <p class="muted">Diplômes & certifications</p>
-      </div>
 
-      <div class="cards-grid">
-        <div class="card">
-          <h4><!-- REMPLIR ICI: diplôme -->Master Informatique</h4>
-          <p class="muted">Université Z — 2018</p>
-        </div>
+            <div class="about-highlights">
 
-        <div class="card">
-          <h4><!-- REMPLIR ICI: certification -->Certification Cloud</h4>
-          <p class="muted">Fournisseur — 2021</p>
-        </div>
-      </div>
-    </section>
+              <div>
+                <span class="highlight-icon">01</span>
+                <div>
+                  <strong>Architecture</strong>
+                  <p>Concevoir des systèmes cohérents et évolutifs.</p>
+                </div>
+              </div>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section container">
-      <div class="section-header">
-        <h2>Projets</h2>
-        <p class="muted">Sélection de projets récents</p>
-      </div>
+              <div>
+                <span class="highlight-icon">02</span>
+                <div>
+                  <strong>Développement</strong>
+                  <p>Construire des interfaces et APIs robustes.</p>
+                </div>
+              </div>
 
-      <div class="projects-grid">
-        <!-- REMPLIR ICI: dupliquer pour chaque projet -->
-        <article class="project-card card">
-          <img src="project-1.jpg" alt="Project 1 screenshot" class="project-thumb">
-          <div class="project-body">
-            <h3><!-- REMPLIR ICI: titre projet -->App SaaS</h3>
-            <p class="muted">Stack: React, Node, Postgres</p>
-            <p><!-- REMPLIR ICI: courte description -->
-              Plateforme de gestion client avec authentification et tableau de bord.
-            </p>
-            <div class="project-actions">
-              <a href="#" class="btn-sm">Voir le projet</a>
-              <a href="#" class="btn-sm btn-outline">Code</a>
+              <div>
+                <span class="highlight-icon">03</span>
+                <div>
+                  <strong>Qualité</strong>
+                  <p>Tester, documenter et améliorer continuellement.</p>
+                </div>
+              </div>
+
             </div>
-          </div>
-        </article>
 
-        <article class="project-card card">
-          <img src="project-2.jpg" alt="Project 2 screenshot" class="project-thumb">
-          <div class="project-body">
-            <h3>API temps réel</h3>
-            <p class="muted">Stack: Node, WebSocket, Redis</p>
-            <p>API temps réel pour synchronisation multi-utilisateurs.</p>
-            <div class="project-actions">
-              <a href="#" class="btn-sm">Voir le projet</a>
-              <a href="#" class="btn-sm btn-outline">Code</a>
+          </article>
+
+
+          <div class="about-side">
+
+            <article class="glass-card info-card reveal reveal-delay-1">
+
+              <span class="card-label">02 / Approche</span>
+
+              <h3>Ma manière de travailler</h3>
+
+              <ul class="check-list">
+                <li>Comprendre le problème avant de coder</li>
+                <li>Concevoir une architecture adaptée</li>
+                <li>Écrire du code lisible et maintenable</li>
+                <li>Tester les fonctionnalités critiques</li>
+                <li>Documenter les décisions importantes</li>
+                <li>Mesurer et améliorer les performances</li>
+              </ul>
+
+            </article>
+
+
+            <article class="glass-card info-card reveal reveal-delay-2">
+
+              <span class="card-label">03 / Positionnement</span>
+
+              <h3>Ce qui me définit</h3>
+
+              <div class="mini-tags">
+                <span>Problem Solving</span>
+                <span>Clean Code</span>
+                <span>Architecture</span>
+                <span>UX</span>
+                <span>Performance</span>
+                <span>Scalability</span>
+              </div>
+
+            </article>
+
+          </div>
+
+        </div>
+
+
+        <!-- PERSONAL INFO -->
+        <div class="personal-data-grid">
+
+          <article class="glass-card reveal">
+
+            <span class="card-label">Localisation</span>
+
+            <!--
+              PERSONNEL
+              Exemple :
+              Antananarivo, Madagascar
+            -->
+
+            <strong>Ville, Pays</strong>
+
+          </article>
+
+
+          <article class="glass-card reveal reveal-delay-1">
+
+            <span class="card-label">Disponibilité</span>
+
+            <!--
+              PERSONNEL
+              Exemples :
+              Freelance
+              CDI
+              Stage
+              Remote
+              Open to opportunities
+            -->
+
+            <strong>À compléter</strong>
+
+          </article>
+
+
+          <article class="glass-card reveal reveal-delay-2">
+
+            <span class="card-label">Langues</span>
+
+            <!--
+              PERSONNEL
+              Exemple :
+              Français — Courant
+              Anglais — Professionnel
+              Malagasy — Langue maternelle
+            -->
+
+            <strong>À compléter</strong>
+
+          </article>
+
+
+          <article class="glass-card reveal reveal-delay-3">
+
+            <span class="card-label">Spécialisation</span>
+
+            <!--
+              PERSONNEL
+              Exemple :
+              Full-Stack Web Development
+              Backend Engineering
+              Cloud & DevOps
+            -->
+
+            <strong>À compléter</strong>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ======================================================
+         SKILLS
+         ====================================================== -->
+
+    <section id="skills" class="section-shell">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <span class="section-number">02</span>
+
+          <div>
+            <span class="section-kicker">Expertise</span>
+            <h2>Compétences</h2>
+          </div>
+
+          <p>
+            Les technologies et pratiques utilisées pour construire
+            des produits fiables.
+          </p>
+
+        </div>
+
+
+        <div class="skills-grid">
+
+          <article class="glass-card skill-card reveal">
+
+            <div class="skill-icon">FE</div>
+
+            <div class="skill-header">
+              <h3>Frontend</h3>
+              <span>01</span>
             </div>
+
+            <p>
+              Création d'interfaces modernes, accessibles,
+              responsives et performantes.
+            </p>
+
+            <div class="tech-list">
+
+              <!--
+                PERSONNEL
+                Garder uniquement les technologies réellement maîtrisées.
+              -->
+
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>TypeScript</span>
+              <span>React</span>
+              <span>Next.js</span>
+
+            </div>
+
+          </article>
+
+
+          <article class="glass-card skill-card reveal reveal-delay-1">
+
+            <div class="skill-icon">BE</div>
+
+            <div class="skill-header">
+              <h3>Backend</h3>
+              <span>02</span>
+            </div>
+
+            <p>
+              Développement d'APIs, logique métier, authentification
+              et architecture serveur.
+            </p>
+
+            <div class="tech-list">
+
+              <span>Node.js</span>
+              <span>Express</span>
+              <span>Python</span>
+              <span>Java</span>
+              <span>Spring Boot</span>
+              <span>REST API</span>
+
+            </div>
+
+          </article>
+
+
+          <article class="glass-card skill-card reveal reveal-delay-2">
+
+            <div class="skill-icon">DB</div>
+
+            <div class="skill-header">
+              <h3>Data</h3>
+              <span>03</span>
+            </div>
+
+            <p>
+              Modélisation, optimisation et gestion de données
+              relationnelles et non relationnelles.
+            </p>
+
+            <div class="tech-list">
+
+              <span>PostgreSQL</span>
+              <span>MySQL</span>
+              <span>MongoDB</span>
+              <span>Redis</span>
+              <span>SQL</span>
+              <span>ORM</span>
+
+            </div>
+
+          </article>
+
+
+          <article class="glass-card skill-card reveal reveal-delay-3">
+
+            <div class="skill-icon">DO</div>
+
+            <div class="skill-header">
+              <h3>DevOps & Cloud</h3>
+              <span>04</span>
+            </div>
+
+            <p>
+              Automatisation, conteneurisation, déploiement
+              et infrastructure.
+            </p>
+
+            <div class="tech-list">
+
+              <span>Git</span>
+              <span>GitHub</span>
+              <span>Docker</span>
+              <span>CI/CD</span>
+              <span>AWS</span>
+              <span>Linux</span>
+
+            </div>
+
+          </article>
+
+
+          <article class="glass-card skill-card reveal">
+
+            <div class="skill-icon">AR</div>
+
+            <div class="skill-header">
+              <h3>Architecture</h3>
+              <span>05</span>
+            </div>
+
+            <p>
+              Organisation des composants logiciels pour favoriser
+              la maintenabilité et l'évolutivité.
+            </p>
+
+            <div class="tech-list">
+
+              <span>Clean Architecture</span>
+              <span>Design Patterns</span>
+              <span>Microservices</span>
+              <span>API Design</span>
+
+            </div>
+
+          </article>
+
+
+          <article class="glass-card skill-card reveal reveal-delay-1">
+
+            <div class="skill-icon">QS</div>
+
+            <div class="skill-header">
+              <h3>Qualité logicielle</h3>
+              <span>06</span>
+            </div>
+
+            <p>
+              Tests, revue de code, documentation, sécurité
+              et amélioration continue.
+            </p>
+
+            <div class="tech-list">
+
+              <span>Testing</span>
+              <span>Code Review</span>
+              <span>Documentation</span>
+              <span>Security</span>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ======================================================
+         EXPERIENCE
+         ====================================================== -->
+
+    <section id="experience" class="section-shell">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <span class="section-number">03</span>
+
+          <div>
+            <span class="section-kicker">Parcours</span>
+            <h2>Expérience</h2>
           </div>
+
+          <p>
+            Un aperçu des expériences professionnelles et
+            responsabilités principales.
+          </p>
+
+        </div>
+
+
+        <div class="timeline">
+
+          <!--
+            PERSONNEL
+            Dupliquer cette carte pour chaque expérience.
+          -->
+
+          <article class="experience-card glass-card reveal">
+
+            <div class="timeline-marker"></div>
+
+            <div class="experience-period">
+              <!-- PERSONNEL -->
+              20XX — Aujourd'hui
+            </div>
+
+            <div class="experience-content">
+
+              <div class="experience-heading">
+
+                <!-- PERSONNEL -->
+                <h3>Poste / Rôle</h3>
+
+                <!-- PERSONNEL -->
+                <span>Entreprise / Organisation</span>
+
+              </div>
+
+              <!-- PERSONNEL -->
+              <p>
+                Décrire ici le contexte de l'expérience,
+                le produit développé et les principales
+                responsabilités.
+              </p>
+
+              <ul class="experience-list">
+
+                <!-- PERSONNEL -->
+                <li>Responsabilité ou réalisation importante</li>
+
+                <!-- PERSONNEL -->
+                <li>Technologie ou architecture utilisée</li>
+
+                <!-- PERSONNEL -->
+                <li>Résultat mesurable ou impact obtenu</li>
+
+              </ul>
+
+              <div class="tech-list">
+
+                <!-- PERSONNEL -->
+                <span>Technologie</span>
+                <span>Technologie</span>
+                <span>Technologie</span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <article class="experience-card glass-card reveal reveal-delay-1">
+
+            <div class="timeline-marker"></div>
+
+            <div class="experience-period">
+              <!-- PERSONNEL -->
+              20XX — 20XX
+            </div>
+
+            <div class="experience-content">
+
+              <div class="experience-heading">
+
+                <!-- PERSONNEL -->
+                <h3>Poste / Rôle précédent</h3>
+
+                <!-- PERSONNEL -->
+                <span>Entreprise / Organisation</span>
+
+              </div>
+
+              <!-- PERSONNEL -->
+              <p>
+                Présenter ici le rôle, le contexte technique
+                et les contributions principales.
+              </p>
+
+              <ul class="experience-list">
+                <li>Réalisation importante</li>
+                <li>Responsabilité importante</li>
+                <li>Résultat ou amélioration obtenue</li>
+              </ul>
+
+              <div class="tech-list">
+                <span>Technologie</span>
+                <span>Technologie</span>
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ======================================================
+         PROJECTS
+         ====================================================== -->
+
+    <section id="projects" class="section-shell">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <span class="section-number">04</span>
+
+          <div>
+            <span class="section-kicker">Réalisations</span>
+            <h2>Projets sélectionnés</h2>
+          </div>
+
+          <p>
+            Des projets qui démontrent la capacité à transformer
+            une idée en solution fonctionnelle.
+          </p>
+
+        </div>
+
+
+        <div class="projects-grid">
+
+
+          <!-- PROJECT 1 -->
+
+          <article class="project-card glass-card reveal">
+
+            <div class="project-image-wrapper">
+
+              <!--
+                PERSONNEL
+                Exemple :
+                images/project-marketplace.jpg
+              -->
+
+              <img
+                src="project-1.jpg"
+                alt="Aperçu du projet"
+                class="project-image"
+                loading="lazy"
+              >
+
+              <div class="project-overlay">
+
+                <!-- PERSONNEL -->
+                <span>Projet #01</span>
+
+              </div>
+
+            </div>
+
+
+            <div class="project-content">
+
+              <div class="project-top">
+
+                <!-- PERSONNEL -->
+                <span class="project-category">
+                  Web Application
+                </span>
+
+                <!-- PERSONNEL -->
+                <span class="project-year">
+                  20XX
+                </span>
+
+              </div>
+
+
+              <!-- PERSONNEL -->
+              <h3>Nom du projet</h3>
+
+              <!-- PERSONNEL -->
+              <p>
+                Décrire le problème résolu, le rôle joué dans
+                le projet et la valeur apportée.
+              </p>
+
+
+              <div class="tech-list">
+
+                <!-- PERSONNEL -->
+                <span>React</span>
+                <span>Spring Boot</span>
+                <span>PostgreSQL</span>
+
+              </div>
+
+
+              <div class="project-actions">
+
+                <!-- PERSONNEL -->
+                <a href="#" class="project-link">
+                  Live Demo ↗
+                </a>
+
+                <!-- PERSONNEL -->
+                <a href="#" class="project-link">
+                  GitHub ↗
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- PROJECT 2 -->
+
+          <article class="project-card glass-card reveal reveal-delay-1">
+
+            <div class="project-image-wrapper">
+
+              <img
+                src="project-2.jpg"
+                alt="Aperçu du projet"
+                class="project-image"
+                loading="lazy"
+              >
+
+              <div class="project-overlay">
+                <span>Projet #02</span>
+              </div>
+
+            </div>
+
+
+            <div class="project-content">
+
+              <div class="project-top">
+                <span class="project-category">
+                  API / Backend
+                </span>
+                <span class="project-year">
+                  20XX
+                </span>
+              </div>
+
+              <!-- PERSONNEL -->
+              <h3>Nom du projet</h3>
+
+              <!-- PERSONNEL -->
+              <p>
+                Présenter le projet, son architecture,
+                ses fonctionnalités principales et son impact.
+              </p>
+
+              <div class="tech-list">
+                <span>Node.js</span>
+                <span>PostgreSQL</span>
+                <span>Redis</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="#" class="project-link">
+                  Live Demo ↗
+                </a>
+                <a href="#" class="project-link">
+                  GitHub ↗
+                </a>
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- PROJECT 3 -->
+
+          <article class="project-card glass-card reveal reveal-delay-2">
+
+            <div class="project-image-wrapper">
+
+              <img
+                src="project-3.jpg"
+                alt="Aperçu du projet"
+                class="project-image"
+                loading="lazy"
+              >
+
+              <div class="project-overlay">
+                <span>Projet #03</span>
+              </div>
+
+            </div>
+
+
+            <div class="project-content">
+
+              <div class="project-top">
+                <span class="project-category">
+                  SaaS / Platform
+                </span>
+                <span class="project-year">
+                  20XX
+                </span>
+              </div>
+
+              <!-- PERSONNEL -->
+              <h3>Nom du projet</h3>
+
+              <!-- PERSONNEL -->
+              <p>
+                Présenter ici une application complète et
+                expliquer brièvement le problème qu'elle résout.
+              </p>
+
+              <div class="tech-list">
+                <span>TypeScript</span>
+                <span>Next.js</span>
+                <span>Database</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="#" class="project-link">
+                  Live Demo ↗
+                </a>
+                <a href="#" class="project-link">
+                  GitHub ↗
+                </a>
+              </div>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ======================================================
+         EDUCATION
+         ====================================================== -->
+
+    <section id="education" class="section-shell">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <span class="section-number">05</span>
+
+          <div>
+            <span class="section-kicker">Parcours académique</span>
+            <h2>Formation</h2>
+          </div>
+
+          <p>
+            Formation académique, apprentissages et certifications.
+          </p>
+
+        </div>
+
+
+        <div class="education-grid">
+
+
+          <article class="glass-card education-card reveal">
+
+            <span class="card-label">Formation</span>
+
+            <!--
+              PERSONNEL
+              Exemple :
+              Master en Informatique
+            -->
+
+            <h3>Diplôme / Formation</h3>
+
+            <!-- PERSONNEL -->
+            <span class="education-school">
+              Université / École
+            </span>
+
+            <!-- PERSONNEL -->
+            <span class="education-date">
+              20XX — 20XX
+            </span>
+
+            <!-- PERSONNEL -->
+            <p>
+              Spécialisation, domaine d'étude ou sujets principaux.
+            </p>
+
+          </article>
+
+
+          <article class="glass-card education-card reveal reveal-delay-1">
+
+            <span class="card-label">Certification</span>
+
+            <!-- PERSONNEL -->
+            <h3>Nom de la certification</h3>
+
+            <!-- PERSONNEL -->
+            <span class="education-school">
+              Organisme
+            </span>
+
+            <!-- PERSONNEL -->
+            <span class="education-date">
+              20XX
+            </span>
+
+            <!-- PERSONNEL -->
+            <p>
+              Domaine ou compétence validée.
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ======================================================
+         SERVICES
+         ====================================================== -->
+
+    <section id="services" class="section-shell">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <span class="section-number">06</span>
+
+          <div>
+            <span class="section-kicker">Ce que je peux apporter</span>
+            <h2>Services</h2>
+          </div>
+
+          <p>
+            Les types de problèmes techniques que je peux résoudre.
+          </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+          <article class="glass-card service-card reveal">
+
+            <span class="service-number">01</span>
+
+            <h3>Développement Full-Stack</h3>
+
+            <p>
+              Conception et développement d'applications web
+              complètes, du frontend au backend.
+            </p>
+
+          </article>
+
+
+          <article class="glass-card service-card reveal reveal-delay-1">
+
+            <span class="service-number">02</span>
+
+            <h3>API & Backend</h3>
+
+            <p>
+              Développement d'APIs robustes, sécurisées,
+              documentées et évolutives.
+            </p>
+
+          </article>
+
+
+          <article class="glass-card service-card reveal reveal-delay-2">
+
+            <span class="service-number">03</span>
+
+            <h3>Architecture</h3>
+
+            <p>
+              Conception technique, structuration des applications
+              et choix technologiques adaptés.
+            </p>
+
+          </article>
+
+
+          <article class="glass-card service-card reveal reveal-delay-3">
+
+            <span class="service-number">04</span>
+
+            <h3>Optimisation</h3>
+
+            <p>
+              Amélioration des performances, de la qualité du code
+              et de la maintenabilité.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ======================================================
+         TESTIMONIALS
+         ====================================================== -->
+
+    <section id="testimonials" class="section-shell">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <span class="section-number">07</span>
+
+          <div>
+            <span class="section-kicker">Réputation</span>
+            <h2>Témoignages</h2>
+          </div>
+
+          <p>
+            Retours de collaborateurs, clients ou responsables.
+          </p>
+
+        </div>
+
+
+        <div class="testimonials-grid">
+
+          <blockquote class="glass-card testimonial reveal">
+
+            <!--
+              PERSONNEL
+              Ne mettre que des témoignages réels.
+            -->
+
+            <div class="quote-mark">“</div>
+
+            <p>
+              Ajouter ici un témoignage réel concernant
+              la collaboration, la qualité du travail
+              ou les résultats obtenus.
+            </p>
+
+            <footer>
+
+              <!-- PERSONNEL -->
+              <strong>Nom de la personne</strong>
+
+              <!-- PERSONNEL -->
+              <span>Poste / Organisation</span>
+
+            </footer>
+
+          </blockquote>
+
+
+          <blockquote class="glass-card testimonial reveal reveal-delay-1">
+
+            <div class="quote-mark">“</div>
+
+            <!-- PERSONNEL -->
+            <p>
+              Ajouter ici un deuxième témoignage réel.
+            </p>
+
+            <footer>
+              <strong>Nom de la personne</strong>
+              <span>Poste / Organisation</span>
+            </footer>
+
+          </blockquote>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ======================================================
+         GITHUB
+         ====================================================== -->
+
+    <section id="github" class="section-shell">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <span class="section-number">08</span>
+
+          <div>
+            <span class="section-kicker">Open Source</span>
+            <h2>GitHub & activité</h2>
+          </div>
+
+          <p>
+            Projets open source, contributions et activité technique.
+          </p>
+
+        </div>
+
+
+        <article class="glass-card github-card reveal">
+
+          <div>
+
+            <span class="card-label">GitHub</span>
+
+            <!--
+              PERSONNEL
+              Exemple :
+              github.com/nomutilisateur
+            -->
+
+            <h3>@username</h3>
+
+            <p>
+              Retrouvez ici mes repositories, contributions,
+              expérimentations et projets open source.
+            </p>
+
+          </div>
+
+
+          <!-- PERSONNEL -->
+          <a href="#" target="_blank" rel="noopener" class="btn btn-primary">
+            Voir GitHub ↗
+          </a>
+
         </article>
+
       </div>
+
     </section>
 
-    <!-- SERVICES -->
-    <section id="services" class="section container">
-      <div class="section-header">
-        <h2>Services</h2>
-        <p class="muted">Ce que je propose</p>
-      </div>
 
-      <div class="cards-grid">
-        <div class="card service">
-          <h4>Développement Full-Stack</h4>
-          <p>Conception, développement et déploiement d'applications web complètes.</p>
-        </div>
-        <div class="card service">
-          <h4>Architecture & Conseil</h4>
-          <p>Audit technique, choix d'architecture, optimisation des coûts cloud.</p>
-        </div>
-        <div class="card service">
-          <h4>Maintenance & Support</h4>
-          <p>Contrats de maintenance, monitoring et amélioration continue.</p>
-        </div>
-      </div>
-    </section>
+    <!-- ======================================================
+         CV
+         ====================================================== -->
 
-    <!-- CERTIFICATIONS -->
-    <section id="certifications" class="section container">
-      <div class="section-header">
-        <h2>Certifications</h2>
-        <p class="muted">Formations et attestations</p>
-      </div>
+    <section id="cv" class="section-shell">
 
-      <div class="cards-grid">
-        <div class="card">
-          <h4>Certification Exemple</h4>
-          <p class="muted">Fournisseur — Année</p>
-        </div>
-      </div>
-    </section>
+      <div class="container">
 
-    <!-- TESTIMONIALS -->
-    <section id="testimonials" class="section container">
-      <div class="section-header">
-        <h2>Témoignages</h2>
-        <p class="muted">Ce que disent mes clients</p>
-      </div>
+        <div class="cv-card glass-card reveal">
 
-      <div class="testimonials-grid">
-        <!-- REMPLIR ICI: ajouter témoignages réels -->
-        <blockquote class="testimonial card">
-          <p>"Excellente collaboration, livraison dans les délais et code propre."</p>
-          <footer>— Client A, CEO</footer>
-        </blockquote>
+          <div>
 
-        <blockquote class="testimonial card">
-          <p>"Très réactif et force de proposition sur l'UX."</p>
-          <footer>— Client B, Product Manager</footer>
-        </blockquote>
-      </div>
-    </section>
+            <span class="section-kicker">Curriculum Vitae</span>
 
-    <!-- GITHUB / ACTIVITÉS -->
-    <section id="github" class="section container">
-      <div class="section-header">
-        <h2>GitHub & Activités</h2>
-        <p class="muted">Contributions récentes</p>
-      </div>
+            <h2>
+              Mon parcours,
+              <span class="gradient-text">en détail.</span>
+            </h2>
 
-      <div class="card">
-        <p class="muted">Intégration possible: widget GitHub, commits récents, stats. <!-- REMPLIR ICI: lien GitHub --> </p>
-        <!-- REMPLIR ICI: si tu veux, intégrer GitHub activity via API ou badges -->
-      </div>
-    </section>
+            <p>
+              Retrouvez mon parcours professionnel, mes compétences,
+              mes formations et mes principales réalisations.
+            </p>
 
-    <!-- CV -->
-    <section id="cv" class="section container">
-      <div class="section-header">
-        <h2>CV</h2>
-        <p class="muted">Télécharger mon CV complet</p>
-      </div>
-
-      <div class="card">
-        <p><!-- REMPLIR ICI: résumé ou lien vers CV PDF -->Téléchargez mon CV pour le détail complet des expériences et compétences.</p>
-        <a href="<!-- REMPLIR ICI: lien CV PDF -->#" class="btn btn-primary">Télécharger le CV (PDF)</a>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section container">
-      <div class="section-header">
-        <h2>Contact</h2>
-        <p class="muted">Discutons de votre projet</p>
-      </div>
-
-      <div class="contact-grid">
-        <form id="contactForm" class="card contact-form" action="#" method="post" onsubmit="handleContact(event)">
-          <!-- REMPLIR ICI: si tu veux un backend, remplacer action par ton endpoint -->
-          <label>
-            <span>Nom</span>
-            <input type="text" name="name" required placeholder="Votre nom">
-          </label>
-
-          <label>
-            <span>Email</span>
-            <input type="email" name="email" required placeholder="votre@exemple.com">
-          </label>
-
-          <label>
-            <span>Sujet</span>
-            <input type="text" name="subject" placeholder="Sujet">
-          </label>
-
-          <label>
-            <span>Message</span>
-            <textarea name="message" rows="6" required placeholder="Décrivez votre projet..."></textarea>
-          </label>
-
-          <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Envoyer</button>
-            <button type="reset" class="btn btn-ghost">Effacer</button>
           </div>
 
-          <!-- REMPLIR ICI: ajouter honeypot ou token anti-spam si nécessaire -->
-        </form>
 
-        <aside class="card contact-info">
-          <h4>Coordonnées</h4>
-          <p><!-- REMPLIR ICI: adresse, téléphone, email -->Email: <a href="mailto:you@example.com">you@example.com</a></p>
-          <p>Téléphone: <!-- REMPLIR ICI -->+261 34 12 345 67</p>
-          <p>Localisation: Fianarantsoa, Madagascar</p>
+          <!--
+            PERSONNEL
+            Exemple :
+            href="cv-miantsa.pdf"
+          -->
 
-          <div class="contact-cta">
-            <a href="mailto:you@example.com" class="btn btn-outline">Envoyer un email</a>
-            <a href="<!-- REMPLIR ICI: lien Calendly ou RDV -->#" class="btn btn-sm">Planifier un RDV</a>
-          </div>
-        </aside>
+          <a href="#" class="btn btn-primary">
+            Télécharger le CV
+            <span>↓</span>
+          </a>
+
+        </div>
+
       </div>
+
     </section>
+
+
+    <!-- ======================================================
+         CONTACT
+         ====================================================== -->
+
+    <section id="contact" class="section-shell">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <span class="section-number">09</span>
+
+          <div>
+            <span class="section-kicker">Contact</span>
+            <h2>Construisons quelque chose.</h2>
+          </div>
+
+          <p>
+            Une idée, un projet ou une opportunité ?
+            Parlons-en.
+          </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+          <form
+            id="contactForm"
+            class="glass-card contact-form reveal"
+            action="#"
+            method="post"
+          >
+
+            <div class="form-row">
+
+              <label>
+                <span>Nom</span>
+
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Votre nom"
+                  required
+                >
+
+              </label>
+
+
+              <label>
+                <span>Email</span>
+
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="vous@exemple.com"
+                  required
+                >
+
+              </label>
+
+            </div>
+
+
+            <label>
+              <span>Sujet</span>
+
+              <input
+                type="text"
+                name="subject"
+                placeholder="Sujet de votre message"
+              >
+
+            </label>
+
+
+            <label>
+              <span>Message</span>
+
+              <textarea
+                name="message"
+                rows="7"
+                placeholder="Parlez-moi de votre projet..."
+                required
+              ></textarea>
+
+            </label>
+
+
+            <button type="submit" class="btn btn-primary">
+              Envoyer le message
+              <span>↗</span>
+            </button>
+
+            <p id="formStatus" class="form-status"></p>
+
+          </form>
+
+
+          <aside class="glass-card contact-info reveal reveal-delay-1">
+
+            <span class="card-label">Coordonnées</span>
+
+            <h3>Restons en contact.</h3>
+
+            <!--
+              PERSONNEL
+              Exemple :
+              email@domaine.com
+            -->
+
+            <a href="mailto:email@exemple.com" class="contact-item">
+              <span>Email</span>
+              <strong>email@exemple.com</strong>
+            </a>
+
+
+            <!--
+              PERSONNEL
+              Exemple :
+              +261 XX XX XXX XX
+            -->
+
+            <div class="contact-item">
+              <span>Téléphone</span>
+              <strong>À compléter</strong>
+            </div>
+
+
+            <!--
+              PERSONNEL
+              Exemple :
+              Antananarivo, Madagascar
+            -->
+
+            <div class="contact-item">
+              <span>Localisation</span>
+              <strong>Ville, Pays</strong>
+            </div>
+
+
+            <div class="contact-socials">
+
+              <!-- PERSONNEL -->
+              <a href="#" target="_blank" rel="noopener">
+                GitHub
+              </a>
+
+              <!-- PERSONNEL -->
+              <a href="#" target="_blank" rel="noopener">
+                LinkedIn
+              </a>
+
+            </div>
+
+          </aside>
+
+        </div>
+
+      </div>
+
+    </section>
+
   </main>
 
+
+  <!-- ========================================================
+       FOOTER
+       ======================================================== -->
+
   <footer class="site-footer">
-    <div class="container footer-grid">
+
+    <div class="container footer-content">
+
       <div>
-        <strong><!-- REMPLIR ICI: Prénom Nom -->Miantsa Rakoto</strong>
-        <p class="muted">Full-Stack Developer</p>
+
+        <!--
+          PERSONNEL
+          Exemple :
+          Miantsa Fitia
+        -->
+
+        <strong>Nom Prénom</strong>
+
+        <p>
+          Full-Stack Developer
+        </p>
+
       </div>
 
-      <nav class="footer-nav">
+
+      <div class="footer-links">
+
+        <a href="#about">À propos</a>
+        <a href="#skills">Compétences</a>
         <a href="#projects">Projets</a>
-        <a href="#services">Services</a>
         <a href="#contact">Contact</a>
-      </nav>
 
-      <div class="footer-legal muted">
-        <p>© <!-- REMPLIR ICI: année -->2026 • Tous droits réservés</p>
       </div>
+
+
+      <div class="footer-copy">
+
+        <!-- PERSONNEL -->
+        © 2026 — Tous droits réservés.
+
+      </div>
+
     </div>
+
   </footer>
 
-  <!-- Minimal JS for interactions and animations -->
+
+  <!-- ========================================================
+       JAVASCRIPT
+       ======================================================== -->
+
   <script>
-    // NAV TOGGLE
-    const navToggle = document.getElementById('navToggle');
-    const navLinks = document.getElementById('navLinks');
-    navToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
-      navToggle.classList.toggle('open');
+
+    /* ========================================================
+       MOBILE NAVIGATION
+       ======================================================== */
+
+    const navToggle = document.getElementById("navToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    navToggle.addEventListener("click", () => {
+
+      const isOpen = navLinks.classList.toggle("open");
+
+      navToggle.classList.toggle("open", isOpen);
+
+      navToggle.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
+
     });
 
-    // Smooth scroll for internal links
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', function (e) {
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    /* Close mobile navigation */
+
+    document.querySelectorAll(".nav-link").forEach(link => {
+
+      link.addEventListener("click", () => {
+
+        navLinks.classList.remove("open");
+        navToggle.classList.remove("open");
+
+        navToggle.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+      });
+
+    });
+
+
+    /* ========================================================
+       SMOOTH SCROLL
+       ======================================================== */
+
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+
+      link.addEventListener("click", event => {
+
+        const targetId = link.getAttribute("href");
+
+        if (!targetId || targetId === "#") {
+          return;
         }
-      });
-    });
 
-    // Simple contact handler (client-side only)
-    function handleContact(e) {
-      e.preventDefault();
-      // REMPLIR ICI: remplacer par envoi réel (fetch vers ton backend / service)
-      alert('Merci — message prêt à être envoyé. Remplacez ce handler par votre backend.');
-      e.target.reset();
-    }
+        const target = document.querySelector(targetId);
 
-    // Micro-interaction: button hover ripple (progressive enhancement)
-    document.querySelectorAll('.btn').forEach(btn => {
-      btn.addEventListener('pointerdown', (ev) => {
-        const circle = document.createElement('span');
-        circle.className = 'ripple';
-        circle.style.left = (ev.offsetX) + 'px';
-        circle.style.top = (ev.offsetY) + 'px';
-        btn.appendChild(circle);
-        setTimeout(() => circle.remove(), 600);
-      });
-    });
-
-    // Reveal on scroll (simple)
-    const reveals = document.querySelectorAll('.section, .card, .project-card, .timeline-item');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('reveal');
+        if (!target) {
+          return;
         }
+
+        event.preventDefault();
+
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+
       });
-    }, { threshold: 0.12 });
-    reveals.forEach(r => observer.observe(r));
+
+    });
+
+
+    /* ========================================================
+       SCROLL REVEAL
+       ======================================================== */
+
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
+    const revealObserver =
+      new IntersectionObserver(
+        entries => {
+
+          entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add("is-visible");
+
+              revealObserver.unobserve(entry.target);
+
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.12,
+          rootMargin: "0px 0px -50px 0px"
+        }
+      );
+
+
+    revealElements.forEach(element => {
+      revealObserver.observe(element);
+    });
+
+
+    /* ========================================================
+       ACTIVE NAVIGATION
+       ======================================================== */
+
+    const sections =
+      document.querySelectorAll("main section[id]");
+
+    const navItems =
+      document.querySelectorAll(".nav-link");
+
+
+    const sectionObserver =
+      new IntersectionObserver(
+        entries => {
+
+          entries.forEach(entry => {
+
+            if (!entry.isIntersecting) {
+              return;
+            }
+
+            navItems.forEach(link => {
+              link.classList.remove("active");
+            });
+
+            const activeLink =
+              document.querySelector(
+                `.nav-link[href="#${entry.target.id}"]`
+              );
+
+            if (activeLink) {
+              activeLink.classList.add("active");
+            }
+
+          });
+
+        },
+        {
+          rootMargin: "-35% 0px -55% 0px"
+        }
+      );
+
+
+    sections.forEach(section => {
+      sectionObserver.observe(section);
+    });
+
+
+    /* ========================================================
+       HEADER ON SCROLL
+       ======================================================== */
+
+    const siteHeader =
+      document.getElementById("siteHeader");
+
+
+    window.addEventListener(
+      "scroll",
+      () => {
+
+        if (window.scrollY > 30) {
+          siteHeader.classList.add("scrolled");
+        } else {
+          siteHeader.classList.remove("scrolled");
+        }
+
+      },
+      { passive: true }
+    );
+
+
+    /* ========================================================
+       CONTACT FORM
+       ======================================================== */
+
+    const contactForm =
+      document.getElementById("contactForm");
+
+    const formStatus =
+      document.getElementById("formStatus");
+
+
+    contactForm.addEventListener("submit", event => {
+
+      event.preventDefault();
+
+      /*
+        PERSONNEL / BACKEND
+
+        Ici tu pourras connecter ton vrai backend.
+
+        Exemple :
+        fetch("/api/contact", {
+          method: "POST",
+          body: new FormData(contactForm)
+        })
+      */
+
+      formStatus.textContent =
+        "Votre message est prêt à être envoyé.";
+
+      contactForm.reset();
+
+    });
+
+
+    /* ========================================================
+       BUTTON RIPPLE
+       ======================================================== */
+
+    document
+      .querySelectorAll(".btn")
+      .forEach(button => {
+
+        button.addEventListener(
+          "pointerdown",
+          event => {
+
+            const ripple =
+              document.createElement("span");
+
+            ripple.className = "ripple";
+
+            const rect =
+              button.getBoundingClientRect();
+
+            ripple.style.left =
+              `${event.clientX - rect.left}px`;
+
+            ripple.style.top =
+              `${event.clientY - rect.top}px`;
+
+            button.appendChild(ripple);
+
+            setTimeout(() => {
+              ripple.remove();
+            }, 700);
+
+          }
+        );
+
+      });
+
   </script>
+
 </body>
 </html>
